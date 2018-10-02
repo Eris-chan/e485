@@ -1,0 +1,131 @@
+[colors]
+background = #ffffff
+foreground = #2b2b2b
+
+red = #f4729b
+green = #00c0c0
+yellow = #e5e5e5
+blue = #d3d3d3
+magenta = #adadad
+cyan = #636363
+gray = #343434
+
+[bar/yuki]
+;width = 1920
+width = 1276
+height = 20
+offset-x = 45
+offset-y = 45
+fixed-center = false
+override-redirect = true
+wm-restack = bspwm
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+border-size = 0
+border-color = #3c3955
+line-size = 3
+line-color = #00000000
+padding-left = 5
+padding-right = 5
+
+module-margin = 1
+
+font-0 = FantasqueSansMono Nerd Font:pixelsize=8,2
+font-1 = xos4 Terminus:pixelsize=8,2
+font-2 = Droid Sans Mono:pixelsize=8,7
+font-3 = Droid Sans Japanese:pixelsize:8,2
+font-4 = Wuncon Siji:pixelsize=8,2
+
+modules-left = bspwm
+modules-right = battery pulseaudio date
+
+[module/bspwm]
+type = internal/bspwm
+; define labels for your workspaces, must match bspwm WS names
+ws-icon-0 = i;" 一 "
+ws-icon-1 = ii;" 二 "
+ws-icon-2 = iii;" 三 "
+ws-icon-3 = iv;" 四 "
+ws-icon-4 = v;" 五 "
+ws-icon-5 = vi;" 六 "
+ws-icon-6 = vii;" 七 "
+ws-icon-7 = viii;" 八 "
+ws-icon-8 = ix;" 九 "
+ws-icon-9 = x;" 十 "
+
+;workspace settings
+format = <label-state> <label-mode>
+
+label-dimmed-foreground = ${colors.foreground}
+label-dimmed-underline = ${colors.gray}
+label-dimmed-focused-background =
+
+label-focused = %icon%
+;label-focused-underline = ${colors.foreground}
+label-focused-foreground = ${colors.foreground}
+label-focused-background = ${colors.red}
+;label-focused-background = ${colors.cyan}
+
+label-occupied = %icon%
+label-occupied-background = ${colors.magenta}
+;label-occupied-underline = ${colors.cyan}
+
+label-empty = %icon%
+label-empty-foreground = #666666
+label-empty-background = ${colors.background}
+
+label-seperator = |
+label-seperator-padding = 0
+label-seperator-foreground = ${colors.foreground}
+
+[module/battery]
+type = internal/battery
+full-at = 99
+battery = BAT0
+adapter = AC
+poll-interval = 5
+
+format-charging = <animation-charging> <label-charging>
+format-discharging = <ramp-capacity> <label-discharging>
+label-charging = %percentage%%
+label-discharging = %percentage%%
+
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
+animation-charging-3 = 
+animation-charging-framerate = 500
+format-charging-underline = ${colors.green}
+format-discharging-underline = ${colors.red}
+
+[module/pulseaudio]
+type = internal/pulseaudio
+format-volume = <ramp-volume> <label-volume>
+use-ui-max = true
+interval = 5
+label-muted-foreground = ${colors.red}
+label-volume-foreground = ${colors.foreground}
+label-muted = 
+ramp-volume-0 = 
+ramp-volume-1 = 
+ramp-volume-2 = 
+ramp-volume-3 = 
+format-volume-underline = ${colors.yellow}
+
+[module/date]
+type = internal/date
+interval = 1.0
+date = %a %m/%d/%Y
+time = %H:%M
+format-date = < <label>
+format-foreground = ${colors.foreground}
+format-underline = ${colors.magenta}
+label = %date% %time%
+

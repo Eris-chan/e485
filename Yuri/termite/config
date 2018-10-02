@@ -1,0 +1,51 @@
+#! /bin/bash
+
+[options]
+visible-bell = true
+mouse_autohide = true
+allow_bold = true
+clickable_url = true
+dynamic_title = true
+font = FantasqueSansMono Nerd Font 8
+scrollback_lines = 1000
+search_wrap = true
+
+cursor_blink = system
+cursor_shape = underline
+
+[colors]
+foreground = #2b2b2b
+foreground_bold = #000000
+background = #ffffff
+
+#black, dark grey
+color0 = #000000
+color8 = #2b2b2b
+
+#red, lightred
+color1 = #f4729b
+color9 = #f4729b
+
+#green, lightgreen
+color2 = #00c0c0
+color10 = #00c0c0
+
+#yellow, lightyellow
+color3 = #e5e5e5
+color11 = #e5e5e5
+
+#blue, lightblue
+color4 = #d3d3d3
+color12 = #d3d3d3
+
+#magenta, lightmagenta
+color5 = #adadad
+color13 = #adadad
+
+#cyan,lightcyan
+color6 = #636363
+color14 = #636363
+
+#lightgray, white
+color7 = #343434
+color15 = #343434

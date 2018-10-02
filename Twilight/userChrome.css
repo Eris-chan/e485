@@ -1,0 +1,132 @@
+:root{
+    --bg-dark:  #000000;
+    --bg-light: #000000;
+    --fg-dark:  #ffffff;
+
+    --red:      #ff44ff;
+    --green:    #78ffff;
+    --yellow:   #ffcfff;
+    --blue:     #ff99ee;
+    --magenta:  #ee66cc;
+    -cyan:      #aa66ee;
+    --gray:     #6644cc;
+
+    --toolbarbutton-border-radius: 0px !important;
+    --in-content-tab-color: var(--bg-light);
+}
+
+/* change Firefox UI font */
+*{
+    font-family: "xos4 Terminus"; 
+    font-size: 12px;
+}
+
+/* hide tab bar if only one tab */
+tab:only-of-type { 
+    display:none; 
+}
+
+/* unset the tab bar min-height */ 
+#tabbrowser-tabs, #tabbrowser-tabs > .tabbrowser-arrowscrollbox, #tabbrowser-tabs[positionpinnedtabs] > .tabbrowser-tab[pinned] {
+    min-height: initial !important;
+}
+
+/* set the height on the tabs instead */
+tab { 
+    line-height: 20px; height: 20px; 
+}
+
+/* hide new tab button so tab-bar can collapse */
+.tabs-newtab-button { 
+    display: none; 
+}
+
+/* Tab bar stuff */
+.tab-label {
+    -moz-box-flex: 1 !important;
+    color:var(--fg-dark);
+    text-align: center !important;
+}
+
+.tab.active.label {
+    font-weight: bold;
+}
+
+#back-button, #forward-button {
+    display:none !important;
+}
+
+#tabbrowser-tabs .tabbrowser-tab .tab-close-button, .tab-icon-image, .titlebar-placeholder, #main-window:-moz-any(#back-button, #forward-button) {
+    display:none !important;
+}
+
+#tabbrowser{
+    background-color: var(--bg-dark) !important;
+}
+
+.tab-background {
+    background-attachment: none !important;
+    background-color: var(--bg-dark) !important;
+    background-image: none !important;
+}
+
+.tabbrowser-tab::before, 
+.tabbrowser-tab::after {
+    display: none !important;
+}
+
+.tabbrowser-tab[fadein]:not([pinned]) {
+    max-width: 100% !important;
+} 
+
+.tab-line {
+    display: none !important;
+}
+
+/* URL bar */
+#nav-bar,#urlbar,#PanelUI-menu-button{
+    padding: 0px !important;
+    margin: 0px !important;
+    height: 20px !important;
+}
+
+#urlbar {
+    box-shadow:none;
+    color:var(--fg-dark) !important;
+    background-color: var(--bg-dark) !important;
+    text-align: center !important;
+}
+
+#identity-box, .urlbar-history-dropmarker, #pageActionButton{
+    display: none !important;
+}
+
+#contentAreaContextMenu{ margin: 5px 0 0 5px }
+
+
+:-moz-any(#content,#appcontent) browser{
+ margin-right:-14px!important;
+ overflow-y:scroll;
+ margin-bottom:-14px!important;
+ overflow-x:scroll;
+}
+
+/*Hide menu button*/
+ #PanelUI-button, #customization-panel-container,
+
+ #customization-panelWrapper .panel-arrow,
+
+ #ctr_panelui-button,
+
+ #wrapper-ctr_panelui-button {
+
+   -moz-box-ordinal-group: 0
+
+ }
+
+
+ #PanelUI-button {
+   display: none !important;
+   background-position: 100% 0, calc(100% - 1px) 0, calc(100% - 2px) 0;
+
+ }

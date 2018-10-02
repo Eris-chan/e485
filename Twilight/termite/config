@@ -1,0 +1,51 @@
+#! /bin/bash
+
+[options]
+visible-bell = true
+mouse_autohide = true
+allow_bold = true
+clickable_url = true
+dynamic_title = true
+font = xos4 Terminus 8
+scrollback_lines = 1000
+search_wrap = true
+
+cursor_blink = system
+cursor_shape = underline
+
+[colors]
+foreground = #ffffff
+foreground_bold = #ffffff
+background = #000000
+
+#black, dark grey
+color0 = #000000
+color8 = #292929
+
+#red, lightred
+color1 = #ef589c
+color9 = #ef589c
+
+#green, lightgreen
+color2 = #66d9d9
+color10 = #66d9d9
+
+#yellow, lightyellow
+color3 = #b957d0
+color11 = #b957d0
+
+#blue, lightblue
+color4 = #6e3e94
+color12 = #6e3e94
+
+#magenta, lightmagenta
+color5 = #3a4c84
+color13 = #3a4c84
+
+#cyan,lightcyan
+color6 = #ea448a
+color14 = #ea448a
+
+#lightgray, white
+color7 = #c7c7c7
+color15 = #c7c7c7

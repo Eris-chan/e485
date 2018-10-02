@@ -1,0 +1,14 @@
+#!/bin/sh
+#
+#~/.xinitrc
+#
+
+xrdb -merge ~/.Xresources
+xbindkeys &
+
+sxhkd -c ~/.config/sxhkd/sxhkdrc &
+termite --exec='bspc monitor eDP-1 -d i ii iii iv v' &
+compton --config ~/.config/compton/compton.conf &
+feh --bg-fill ~/configs/Wallpapers/Twilight.png &
+polybar -c ~/configs/Yuri/polybar/config yuri &
+exec bspwm -c ~/configs/Yuri/bspwm/bspwmrc
