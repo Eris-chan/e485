@@ -1,7 +1,5 @@
 #! /bin/bash
 
-#.  ~/.config/colors/yandere.sh
-
 [options]
 resize_grip = false
 scroll_on_output = false
